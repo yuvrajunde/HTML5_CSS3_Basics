@@ -1,0 +1,26 @@
+$(document).ready(function(){
+	height1=$("header").height()
+	$(window).scroll(function(){
+		if($(window).scrollTop()>height1)
+		{
+			$("#menu").css({
+				'position':'fixed',
+				'top':0,
+				'z-index':'1000',
+				'width':'960px'
+			})
+			$("#topslider").css("display","block")
+		}
+		else
+
+		{
+			$("#menu").css("position","static");
+			$("#topslider").css("display","none");
+		}	
+	})
+	$("#topslider").click(function(){
+		$("body").animate({
+			'scrollTop':0
+		},1000)
+	})
+})

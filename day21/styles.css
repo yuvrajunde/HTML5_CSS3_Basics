@@ -1,0 +1,224 @@
+*{
+	margin: 0;
+	padding:0;
+	font-size: 16px;
+	font-family: 'Trebuchet MS', helvetica, sans-serif;
+	/*border:1px solid;*/
+}
+
+#logo{
+	margin: 10px 10px;
+	/*padding-left: 700px;*/
+}
+
+#header span{
+	border:1px dashed #111;
+	}
+
+.spandata{
+	padding-left: 25px;
+	margin-left: 50px;
+	width: auto;
+}
+.spanfirst{
+	background: url(images/cashon.png);
+}
+.spanmiddle{
+	background: url(images/policy.png);
+}
+.spanlast{
+	background: url(images/call.png);
+}	
+.spandata{
+		background-repeat: no-repeat;
+}
+
+#secttop{
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+
+#wrapper{
+	box-shadow: 8px 8px 8px 8px #eee;
+width: 960px;
+height: 1200px;
+margin: 0 auto;
+}
+
+#menu
+{
+height: auto;
+text-align: center;
+/*border:1px solid;*/
+overflow: auto;
+background-color: #eee;
+}
+
+#menu ul
+{
+list-style: none;
+
+margin: 0 auto;
+}
+
+#menu ul li{
+float: left;
+background: #eee;
+}
+
+#menu ul li a{
+text-decoration: none;
+font-family: 'Trebuchet MS', helvetica,sans-serif;
+color:#900;
+background-color: #eee;
+display: block;
+padding:10px;
+padding-left: 50px;
+padding-right: 50px;
+font-size: 20px;
+transition: background-color 0.5s;
+}
+
+#menu ul li a:hover{
+	color: white;
+	background-color: #a00;
+}
+
+#banner img{
+	width: 960px;
+}
+
+#header, #footer, #menu, #banner, #content{
+
+}
+
+#line{
+	background: url(images/bg.gif);
+	height: 5px;	
+	margin: 0 auto;
+}
+#footer{
+	margin: 0 auto;
+	background-color: #999;
+	height: 345px;
+}
+#footerdata{
+
+	width:960px;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+.fdata{
+	margin-top: 25px;
+	width: 160px;
+	float: left;
+}
+
+.fdata h2{
+	font-size: 30px;
+	font-family: arial, helvetica, sans-serif;
+	color: white;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.fdata nav ul {
+	list-style: none;
+}
+
+.fdata nav ul li{
+	text-align: center;
+}
+.fdata nav ul li a{
+	text-align: center;
+	color: #800;
+	display: block;
+	text-decoration: none;
+	text-decoration: underline dashed #0bb;
+	padding: 3px;
+}
+.fdata nav ul li a:hover{
+	color: #0ff;
+
+}
+
+#content{
+	overflow:auto;
+}
+.articledata{
+	margin-top: 10px;
+	width: 310px;
+	float: left;
+	padding-left: 2px;
+}
+
+.artlast{
+	float: right;
+}
+
+.articledata figure figcaption{
+	text-transform: capitalize;
+	color:#666;
+	word-spacing: 3px;
+	line-height: 30px;
+}
+.artmid{
+	margin-left: 12px;
+}
+#hiddenmenu
+{
+height: auto;
+text-align: center;
+/*border:1px solid;*/
+display: none;
+top:0;
+width: 960px;
+position: fixed;
+z-index: 100;
+overflow: auto;
+background-color: #eee;
+}
+
+#hiddenmenu ul
+{
+list-style: none;
+
+margin: 0 auto;
+}
+
+#hiddenmenu ul li{
+float: left;
+background: #eee;
+}
+
+#hiddenmenu ul li a{
+text-decoration: none;
+font-family: 'Trebuchet MS', helvetica,sans-serif;
+color:#900;
+background-color: #eee;
+display: block;
+padding:10px;
+padding-left: 50px;
+padding-right: 50px;
+font-size: 20px;
+transition: background-color 0.5s;
+}
+
+#hiddenmenu ul li a:hover{
+	color: white;
+	background-color: #a00;
+}
+#topslider1
+{
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background: url(images/icon_top.png);
+	opacity: 0.5;
+	position: fixed;
+	right: 5%;
+	bottom: 10%;
+	display: none;
+	cursor: pointer;
+}

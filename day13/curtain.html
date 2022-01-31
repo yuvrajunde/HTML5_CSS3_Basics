@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	*
+	{
+		padding: 0;
+		margin: 0;
+	}
+
+	#leftcurtain
+	{
+		/*border: 1px solid;*/
+		width: 50%;
+		height: 100%;
+		position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	background: url(images/curtain.jpg);
+	}
+	#rightcurtain
+	{
+		/*border: 1px solid;*/
+		width: 50%;
+		height: 100%;
+		position: fixed;
+ 	top: 0;
+ 	right: 0;
+ 	background: url(images/curtain.jpg);
+	}
+	#circle
+	{
+		width: 150px;
+		height: 150px;
+		/*border: 1px solid;*/
+		background: black;
+		position: fixed;
+		z-index: 10;
+		border-radius: 100px;
+		opacity: 0.5;
+		left: 50%;
+		margin-left: -78px;
+		top: 50%;
+		margin-top: -80px;
+		cursor: pointer;
+	}
+
+	</style>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#circle").click(function(){
+			$("#leftcurtain,#rightcurtain").animate({
+				"width":"0"
+			},1000)
+			$(this).animate({
+				"top":"-300px"
+			},1000)
+		})
+	})
+	</script>
+</head>
+<body>
+	<div id="leftcurtain" class="curtain"></div>
+	<div id="rightcurtain" class="curtain"></div>
+	<div id="circle"></div>
+	<div id="wrapper">
+		some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here  some text here some text here some text here some text here some text here some text here some text heresome text here some text here some text heresomesome text here
+	</div>
+
+</body>
+</html>

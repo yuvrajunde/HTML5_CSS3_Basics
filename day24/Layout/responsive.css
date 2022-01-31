@@ -1,0 +1,121 @@
+@viewport
+{
+	width: device-width;
+
+}
+@-webkit-viewport
+{
+	width: device-width;
+}
+@-moz-viewport
+{
+	width: device-width;
+
+}
+@-o-viewport
+{
+	width: device-width;
+}
+@-ms-viewport
+{
+	width: device-width;
+}
+@media screen and (min-width:200px) and (max-width:600px)
+{
+	body 
+	{
+		border: 5px solid red;
+	}
+	#wrapper,#header,#menu,#banner,#banner img,#content,footer,#footerdata
+	{
+		border: none;
+		width: 100%;
+	}
+	#circle
+ 	{
+ 		width: 100px;
+ 		height: 100px;
+ 		border-radius: 50px;
+ 		border:1px solid;
+ 		position: fixed;
+ 		z-index: 101;
+ 		background: black;
+ 		opacity: 0.5;
+ 		left: 50%;
+ 		top: 50%;
+ 		margin-left: -50px;
+        margin-top: -50px;
+        cursor: pointer;
+
+ 	}
+	#banner
+	{
+			position: relative;
+	overflow: hidden;
+	height: 120px;
+	}
+	#banner img
+	{
+			position: absolute;
+	}
+	#topdata
+	{
+		display: none;
+	}
+	#logo
+	{
+		text-align: center;
+	}
+	#menu ul li
+	{
+		float: none;
+		text-align: center;
+		/*border-bottom: 1px solid white;*/
+	}
+
+   .articledata
+   {
+   	float: none;
+   	width: 98%;
+   	margin: 2px auto;
+   }
+   .articledata figure img
+   {
+   	 width: 100%;
+   }
+   .fdata
+   {
+   		float: none;
+   		width: 100%;
+   		margin-left: 0;
+   		text-align: center;
+   }
+	.bottommenu
+	{
+		display: none;
+
+	}
+	.fdata h2
+	{
+		border: 0;
+		text-align: center;
+		cursor: pointer;
+	}
+	#menuslider
+	{
+		display: block;
+		cursor: pointer;
+	}
+	#slidemenu
+	{
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	
+	#headmenu
+	{
+		display: block;
+	}
+}

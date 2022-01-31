@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">
+		#main
+		{
+			width: 500px;
+			height: 600px;
+			border: 1px solid;
+			margin: 0 auto;
+			position: relative;
+		}
+		#ball
+		{
+			width: 50px;
+			height: 50px;
+			background: red;
+			border-radius: 25px;
+			left: 50%;
+			margin-left: -25px;
+			position: absolute;
+			bottom: 100%;
+			margin-bottom: -50px;
+		}
+		</style>
+
+		<script src="jquery.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			// alert()
+
+			btm = 600
+			flag = 0
+			time = 600
+			var t1 = setInterval(function(){
+				// alert()
+				if(flag == 0)
+				{
+					$("#ball").animate({
+						"bottom" : "50px"
+					},time)
+					flag = 1
+				}
+				else
+				{
+					btm = btm - 100
+					if(btm <= 0)
+					{
+						btm = 50						
+					}
+					time = time - 50
+					btmf = btm + "px"
+					$("#ball").animate({
+						"bottom" : btmf
+					},time)
+					flag = 0
+				}
+
+			},300)
+		})
+		</script>
+	</head>
+	<body>
+		<div id="main">
+			<div id="ball"></div>
+		</div>
+	</body>
+</html>

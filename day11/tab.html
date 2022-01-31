@@ -1,0 +1,77 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	#main
+	{
+		border:1px solid;
+		width: 550px;
+		margin: 20 auto;
+	}
+	h1, p
+	{
+		border:1px solid;
+		margin: 0;
+		padding: 0;
+
+	}
+	h1
+	{
+		cursor: pointer;
+		float: left;
+		font-size: 25px;
+		background: red;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		padding: 10px;
+	
+	}
+
+	</style>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+    $(document).ready(function(){
+    	$("p:not(:first)").hide()
+    	$("h1").click(function(){
+    		var n=$(this).index()
+    		$("#para p").hide()
+    		$("#para p:eq("+n+")").show()
+    	})
+    		
+    })
+
+
+	</script>
+</head>
+<body>
+	<div id="main">
+		<div id="head">
+			<h1>Heading1</h1>
+			<h1>Heading2</h1>
+			<h1>Heading3</h1>
+			<h1>Heading4</h1>
+			
+			
+			
+			
+
+		</div>
+		<div id="para">
+		<p>Paragraph1 some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here V</p>
+		
+		<p>Paragraph2 some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here V</p>
+	
+		<p>Paragraph3 some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here V</p>
+		
+		<p>Paragraph4 some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here V</p>
+		
+		
+
+</div>
+
+
+
+
+	</div>
+</body>
+</html>

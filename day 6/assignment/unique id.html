@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	#test1
+	{
+		color: red;
+	}
+    #test1:hover
+    {
+    	color: #565656;
+    }
+
+	</style>
+	<script type="text/javascript">
+      function display()
+      {
+      	var msg=document.getElementById("txtdata").value
+      	document.getElementById("test1").innerHTML=msg
+      	      }
+
+	</script>
+</head>
+<body>
+<input id="txtdata"><input type="button"  value="click" onclick="display()">
+<h1 id="test1">Dummy Data</h1>
+<h1 id="test1">Dummy Data</h1>
+
+</body>
+</html>

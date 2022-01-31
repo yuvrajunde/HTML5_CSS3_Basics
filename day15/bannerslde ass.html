@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+	#banner
+	{
+		width: 960px;
+		margin: 0 auto;
+		height: 656px;
+		position: relative;
+		overflow: hidden;
+
+	}
+		#banner img
+	{
+		width: 960px;
+		margin: 0 auto;
+		position: absolute;
+
+	}
+	</style>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		//alert()
+		$(".record:not(:first)").css({"margin-left":"960px"})
+		var i=0
+		setInterval(function(){
+
+			$(".record:eq("+i+")").animate({"margin-left":"-960px"})
+				$(".record:not(this)").css({"margin-left":"960px"})
+			i=(i+1)%4
+			$(".record:eq("+i+")").animate({"margin-left":"0px" })
+		},3000)
+
+	})
+
+	</script>
+</head>
+<body>
+	<div id="banner">
+		<img src="images/image1.jpg" class="record">
+		<img src="images/image4.jpg" class="record">
+		<img src="images/image3.jpg" class="record">
+		<img src="images/image2.jpg" class="record">
+	</div>
+
+</body>
+</html>

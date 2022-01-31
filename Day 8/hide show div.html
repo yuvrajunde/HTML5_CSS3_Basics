@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+	#main
+	{
+		width: 200px;
+		height: 400px;
+		position: fixed;
+		right: 10%;
+		top: -300px;
+		/*border: 1px solid;*/
+
+	}
+
+	#top
+	{
+		height: 300px;
+		background: linear-gradient(red, green, blue);
+	}
+	#bottom
+	{
+		height: 100px;
+		background: red;
+		cursor: pointer;
+	}
+	</style>
+
+	<script type="text/javascript">
+	var flag = 0
+	function displaydiv()
+	{
+		if(flag == 0)
+		{
+			document.getElementById("main").style.top = 0
+			flag =1
+		}
+		else
+		{
+			document.getElementById("main").style.top = "-300px"
+			flag =0
+		}
+	}
+	</script>
+</head>
+<body>	
+	<div id="main">
+		<div id="top"></div>
+		<div id="bottom" onclick="displaydiv()"></div>
+	</div>
+</body>
+</html>

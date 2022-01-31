@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	div{
+	}
+	#show{
+		width:40px;
+		background-color: orange;
+		padding: 10px;
+		color:white;
+		cursor:pointer;
+	}
+	#sect{
+		width: 100%;
+		height: 400px;
+		border:1px solid;
+		background:#900;
+		display:none;
+	}
+</style>
+<script src="jq.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		alert("hello");
+		var flag=0;
+		$('#show').click(function(){
+				if(flag==0)
+			{
+			$('#sect').slideDown('slow');
+				flag=1;
+			}
+			else{
+				$("#sect").slideUp('fast');
+				flag=0;
+			}
+		})
+	})
+</script>
+	<title></title>
+</head>
+<body>
+<div id="sect"></div>
+<div id="show">Show</div>
+</body>
+</html>

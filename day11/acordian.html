@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	#main
+	{
+		border:1px solid;
+		width: 400px;
+		margin: 20 auto;
+	}
+	h1, p
+	{
+		border:1px solid;
+		margin: 0;
+		padding: 0;
+
+	}
+	h1
+	{
+		cursor: pointer;
+	}
+
+	</style>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+    $(document).ready(function(){
+    	$("h1").css("background","red")
+    	$("h1:first").css({
+    		"background":"blue",
+    		"color":"white",
+    		"border":"1px solid blue"
+    	})
+    	$("p:not(:first)").hide()
+    	$("h1").click(function(){
+    		$("p").hide(2000)
+    		$(this).next().show(2000)
+    		$("h1").css({
+    			"background":"red",
+    			"color":"black",
+    			"border":"black"
+    		})
+    		$(this).css({
+
+    			"background":"blue",
+    			"color":"white",
+    			"border":"1px solid blue"
+
+    		})
+    	})
+    })
+
+
+	</script>
+</head>
+<body>
+	<div id="main">
+		<h1>Heading1</h1>
+		<p>Paragraph1 some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here V</p>
+		<h1>Heading2</h1>
+		<p>Paragraph2 some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here V</p>
+		<h1>Heading3</h1>
+		<p>Paragraph2 some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here V</p>
+		<h1>Heading4</h1>
+		<p>Paragraph2 some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here V</p>
+		<h1>Heading5</h1>
+		<p>Paragraph2 some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here some text here V</p>
+
+
+
+
+
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	#banner
+	{
+		/*border: 1px solid;*/
+		width:960px;
+		margin: 0 auto;
+		position: relative;
+	}
+	#banner img
+	{
+		/*border: 1px solid;*/
+		width:960px;
+		margin: 0 auto;
+		position: absolute;
+	}
+	.record
+	{
+		border: 1px solid
+	}
+
+
+	</style>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		//alert()
+		$(".record:not(:first)").hide()
+		var i=0
+		setInterval(function(){
+
+			$(".record:eq("+i+")").fadeOut(1000)
+			i=(i+1)%4
+			$(".record:eq("+i+")").fadeIn(2000)
+		},3000)
+
+	})
+
+
+	</script>
+</head>
+<body>
+	<div id="banner">
+		<img src="images/image1.jpg" class="record">
+		<img src="images/image3.jpg" class="record">
+		<img src="images/image2.jpg"  class="record">
+		<img src="images/image4.jpg"  class="record">
+	</div>
+
+</body>  
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	function validate(data)
+	{
+		// alert(data)
+		// {limit}
+		// {10}=> exactly 10 letter
+		// {2,5}=> min 2 ,max5 lettr
+		// {2,}=> min 2 ,max5 no limit
+		
+		regexp=/^[0-9]{10}$/
+		var res=regexp.test(data)
+		if(res==true)
+		{
+			document.getElementById("txtres").innerHTML="nice"
+			// alert("nice")
+		}
+		else
+		{
+			document.getElementById("txtres").innerHTML="error"
+
+		document.getElementById("txtphoneno").style.border="1px solid red"
+	}	
+
+	}
+
+
+	</script>
+</head>
+<body>
+	<input id="txtphoneno" onkeyup="validate(this.value)">
+<span id="txtres"></span>
+</body>
+</html>

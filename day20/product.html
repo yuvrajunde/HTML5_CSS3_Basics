@@ -1,0 +1,122 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	#imageslider
+	{
+		width: 80%;
+	
+		height: 80%;
+		border: 1px solid ;
+		margin: 0 auto;
+
+	}
+	.sbchild
+	{
+		position: absolute;
+	}
+
+	.sliderblock
+	{
+		border: 1px solid;
+		margin:30px;
+		width: 200px;
+		height: 200px;
+		float: left;
+		position: relative;
+		border-radius: 100px;
+		overflow: hidden;
+
+	}
+	.firstblock,img
+	{
+		width: 200px;
+		height: 200px;
+		border:1px solid
+		;
+		border-radius: 100px;
+	}
+	#button
+	{
+		/*border: 1px solid #999;*/
+	
+		margin: 25px;
+		padding: 10px;
+		background: #c0c5c8  ;
+		box-shadow: 0px 0px 10px 10px #ccc;
+        	cursor: pointer;
+        	font-size: 20px;
+		border-radius: 30px;
+			margin-top: 80px;
+			text-align: center;
+			color: #900;
+	}
+	#button:hover
+	{
+		color: white;
+		background: #220;
+	}
+	.secondblock
+	{
+		width: 200px;
+
+		height: 200px;
+		border-radius: 100px;
+		background: #baaa07;
+		opacity: 0.9;
+		margin-top: 200px;
+
+		position: absolute;
+
+	}
+	
+
+
+	</style>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		// alert()
+		$(".sliderblock").mouseover(function(){
+			// alert()
+			$(this).find(".secondblock").animate({
+				"margin-top" :"0"
+			},200)
+		})
+		$(".sliderblock").mouseleave(function(){
+			// alert()
+			$(this).find(".secondblock").animate({
+				"margin-top" :"200px"
+			},200)
+		
+	})
+})
+
+	</script>
+</head>
+<body>
+
+	<div id="imageslider">
+		<div class="sliderblock">
+
+			<div class="sbchild firstblock"><img src="images/pro2.jpg"></div>
+			<div class="sbchild secondblock">
+				<div id="button">Order Now</div>
+			</div>
+
+		</div>
+		<div class="sliderblock">
+
+			<div class="sbchild firstblock"><img src="images/pro6.jpg"></div>
+			<div class="sbchild secondblock">
+					<div id="button">Order Now</div>
+			</div>
+
+		</div>
+
+
+
+	</div>
+	
+</body>
+</html>

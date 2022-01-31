@@ -1,0 +1,89 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	#main
+	{
+		height: 450px;
+		width: 950px;
+		position: relative;
+		margin: 0 auto;
+		overflow: hidden;
+		border: 1px solid;
+	}
+	#slider
+	{
+		
+		height: 450px;
+		position:absolute; 
+		border: 1px solid;
+
+	}
+	#slider img
+	{
+		width: 957px;
+		height: 450px;
+	}
+	#gallery
+	{
+		/*border: 1px solid;*/
+		height: 60px;
+		width: 500px;
+		overflow: auto;
+		margin:20 auto; 
+	}
+	#imp img
+	{
+		border: 1px solid;
+		height: 50px;
+		width: 70px;
+		float: left;
+		margin: 3 auto;
+		border-radius: 15px;
+		cursor: pointer;
+		margin-left: 10px;
+	}
+   	#imp img:hover
+   	{
+   		opacity: 0.8;
+   	}
+
+	</style>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+      $(document).ready(function(){
+           //alert()
+           $("	#slider").css("width",960*4+"px")
+          var i=0
+          $(".record").click(function(){
+          	i=($(this).index())
+          	// alert()
+          	var left1=0
+          	left1=-(i*960)+"px"
+          	//alert(left1)
+          	$("#slider").animate({"left":left1})
+          
+          })
+
+
+      })
+
+	</script>
+</head>
+<body>
+	<div id="main">
+		<div id="slider"><img src="images/image1.jpg"><img src="images/image2.jpg"><img src="images/image3.jpg"><img src="images/image4.jpg" >
+		</div>
+
+	</div>
+	<div id="gallery">
+		             
+                       <div id="imp"  class="record"><img src="images/image1.jpg"></div>
+                       <div id="imp"class="record"><img src="images/image2.jpg" ></div>
+                        <div id="imp" class="record"><img src="images/image3.jpg" ></div>
+                       <div id="imp" class="record"><img src="images/image4.jpg" ></div>
+                       
+	</div>
+
+</body>
+</html>

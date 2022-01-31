@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+	#displaycart
+	{
+		width: 27px;
+		height: 26px;
+		background: url(images/cartimg.png);
+		position: fixed;
+		top: 0;
+		right: 0;
+		cursor: pointer;
+	}
+
+	#cart
+	{
+		width: 700px;
+		height: 400px;
+		border: 5px solid black;
+		position: fixed;
+		display: none;
+		left: 50%;
+		top: 50%;
+		margin-left: -350px;
+		margin-top: -200px;
+	}
+	</style>
+
+	<script type="text/javascript">
+	var cartflag = 0
+	function displaycart()
+	{
+		//alert()
+		if(cartflag == 0)
+		{
+			document.getElementById("cart").style.display = "block"
+			cartflag = 1
+		}
+		else
+		{
+			document.getElementById("cart").style.display = "none"
+			cartflag = 0
+		}
+	}
+	</script>
+</head>
+<body>
+	<div id="displaycart" onclick="displaycart()"></div>
+
+	<div id="cart"></div>
+</body>
+</html>

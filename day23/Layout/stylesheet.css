@@ -1,0 +1,297 @@
+.fix
+{
+	clear: both;
+	/*left, right*/
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+article, figure, header, footer, nav, section, figcaption
+{
+	display: block;
+} 
+body
+{
+	background-color: rgb(255,255,255);
+	font-size: 16px;
+	color: rgb(0,0,0);
+	font-family: arial, verdana;
+}
+
+a
+{
+	font-size: 14px;
+	color: rgb(50,50,50);
+}
+
+ul
+{
+	list-style: none;
+}
+
+#wrapper
+{
+	border:1px solid;
+	width: 960px;
+	/*height: 1000px;*/
+	margin: 0 auto;
+}
+
+header, #menu, #banner, #cotent, footer
+{
+	border:  1px solid;
+}
+
+#banner img
+{
+	width: 960px;
+}
+
+#menu
+{
+	border: 1px solid;
+
+}
+
+/*css nesting */
+#menu ul
+{
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+	background-color: rgb(30,32,31);
+	overflow:  auto;
+}
+
+#menu ul li
+{
+	float: left;
+
+
+}
+
+#menu ul li a
+{
+	border-right:  1px solid rgb(100,100,100);
+	display: block;
+	padding: 10px 20px;
+	color: rgb(255,255,255);
+	text-decoration: none;
+	transition: background-color 2s;
+
+}
+
+#menu ul li a:hover
+{
+	background-color:  rgb(0,100,0);
+}
+
+#headmenu
+{
+	display: none;
+}
+#slidemenu
+{
+	width: 150px;
+	position: fixed;
+	left: 0;
+	top: 38px;
+	margin-left: -152px;
+	display: none;
+}
+#slidemenu ul
+{
+	margin: 0;
+	padding: 0;
+    
+	list-style: none;
+	background-color: rgb(30,32,31);
+	overflow:  auto;
+}
+
+#slidemenu ul li
+{
+	float: none;
+	text-align: center;
+	border: 1px solid #f5f5f5;
+
+
+}
+
+#slidemenu ul li a
+{
+	border-right:  1px solid rgb(100,100,100);
+	display: block;
+	padding: 10px 20px;
+	color: rgb(255,255,255);
+	text-decoration: none;
+	transition: background-color 2s;
+
+}
+
+#slidemenu ul li a:hover
+{
+	background-color:  rgb(0,100,0);
+}
+
+#menuslider
+{
+	width: 40px;
+	height: 38px;
+	/*background: url(images/nav-menu.jpg);*/
+	background: #ccc;
+	border: 2px solid #847cca;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+#logo
+{
+	border-top: 1px dashed rgb(200,200,200);
+	padding: 20px 0;
+}
+
+#topdata
+{
+	padding: 25px 0;
+}
+
+.spandata
+{
+	/*border : 1px solid;*/
+	padding-left: 30px;
+		background-image: url(images/cashon.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+
+.spanmiddle
+{
+	background-image: url(images/policy.png);
+}
+
+.line
+{
+	height: 5px;
+	/*height is given bcz no data in div so by dafault height is 0 and when v apply bg img it wont apper 
+	there fore v hv given height*/
+	background-image: url(images/bg.gif);
+}
+
+footer
+{
+	/*border: 1px solid;*/
+	/*height: 300px;*/
+	background-color: rgb(60,61,62);
+	padding: 20px 0;
+}
+
+#footerdata
+{
+	/*border:  1px solid rgb(255,255,255);*/
+	width: 960px;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+.fdata
+{
+	/*border: 1px solid rgb(255,255,255);*/
+	width: 16%;
+	float: left;
+}
+
+.fright
+{
+	float: right;	
+}
+
+.fmiddle
+{
+	margin-left: 5px;
+}
+
+.fdata h2
+{
+	border: 1px solid;
+	font-size: 20px;
+	font-weight: normal;
+	color: #fff;
+}
+
+.bottommenu
+{
+	margin: 20px 0;
+}
+
+
+.bottommenu ul li 
+{
+	margin: 5px 0;
+}
+
+.bottommenu ul li a
+{
+	color: #aaaaaa;
+	text-decoration: none;
+	transition: margin-left 2s;
+}
+
+
+.bottommenu ul li a:hover
+{
+	margin-left: 10px;
+	color: #eee;
+}
+
+#content
+{
+	/*	*/
+	margin: 10px 0;
+	/*overflow: auto;*/
+}
+
+.articledata
+{
+	border: 1px solid #ccc;
+	width: 310px;
+	float: left;
+}
+
+.articleright
+{
+	float: right;
+}
+
+.articlemiddle
+{
+	margin-left: 10px;
+}
+
+.articleimg
+{
+	padding: 2px;
+}
+
+.figuredata
+{
+	color: #666;
+	text-align: justify;
+	text-transform: capitalize;
+	line-height: 160%;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,89 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	#banner
+	{
+		/*border: 1px solid;*/
+		width:960px;
+		margin: 0 auto;
+		position: relative;
+		height: 450px;
+		overflow: hidden;
+	}
+	#banner img
+	{
+		/*border: 1px solid;*/
+		width:960px;
+		/*margin: 0 auto;*/
+		position: absolute;
+	}
+	.circle
+	{
+		width: 10px;
+		height: 10px;
+		border-radius: 5px;
+		background: red;
+		position: absolute;
+		bottom: 10%;
+	}
+	
+
+
+	</style>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		//alert()
+		$(".record:not(:first)").css("margin-left","960px")
+		$(".circle:not(:first)").css("background","white")
+
+		$(".circle:eq(0)").css("left","45%")
+		$(".circle:eq(1)").css("left","50%")
+		$(".circle:eq(2)").css("left","55%")
+		$(".circle:eq(3)").css("left","60%")
+
+		var i=0
+		setInterval(function(){
+
+			$(".record:eq("+i+")").animate({
+                    "margin-left":"-960px"
+			},1000)
+			$(".record:eq("+i+")").fadeOut(1000);
+
+				$(".record:eq("+i+")").animate({
+                    "margin-left":"960px"
+			},1000)
+				$(".record:eq("+i+")").fadeIn(1000);
+				$(".circle:eq("+i+")").css("background","white")
+
+			i=(i + 1) % 4
+			$(".circle:eq("+i+")").css("background","red")
+			$(".record:eq("+i+")").animate({"margin-left":"0"
+		},1000)
+			$(".circle:eq("+i+")").css("background","red")
+
+	},3000)
+	})	
+
+
+
+	</script>
+</head>
+<body>
+	<div id="banner">
+		<img src="images/image1.jpg"class="record">
+		<img src="images/image3.jpg"class="record">
+		<img src="images/image2.jpg"class="record">
+		<img src="images/image4.jpg"class="record">
+
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		
+		<div class="circle"></div>
+	
+	</div>
+
+</body>  
+</html>

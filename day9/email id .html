@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	function email(data)
+{
+		 data=data.toLowerCase()
+		 /*(160by2).(com)
+		 (google).(com)
+		 (hot-mail).(com)
+		 (yahoo).(co) .(in)   
+
+
+
+		 */
+
+        regexp=/^([a-z0-9][a-z0-9_\.]*[a-z0-9])@(([a-z0-9][a-z0-9\-]*[a-z0-9])\.([a-z]{2,4})(\.[a-z]{2,4})?)$/
+		var res=regexp.test(data)
+		if(res==true)
+		
+			document.getElementById("txtemails").innerHTML="nice"
+		
+		else
+		
+			document.getElementById("txtemails").innerHTML="error"
+
+		
+	}
+
+
+	</script>
+
+
+</head>
+<body>
+	<input id="txtemail" onkeyup="email(this.value)">
+	<span id="txtemails">Result</span>
+</body>
+</html>

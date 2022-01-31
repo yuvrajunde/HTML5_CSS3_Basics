@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style type="text/css">
+             #content
+             {
+             	border: 1px solid black;
+             	margin: 0 auto;
+             	width: 370px;
+             }
+             #main
+             {
+             	/*border: 1px solid green;*/
+             	height: 480px;
+             }
+             #thumb
+             {
+             	margin-top: 10px;
+             	border-top: 1px solid red;
+             	 text-align: center;
+
+             }
+             #thumb img
+             {
+             	cursor: pointer;
+                  border: 1px solid white;
+
+             }
+              #thumb img:hover
+             {
+                  
+                  border: 1px solid red;
+                  
+             }
+	  </style>
+      <script type="text/javascript">
+      function change(thumbsrc)
+      {//alert(thumbsrc)
+      	mainsrc=thumbsrc.replace("thumb","main")
+      	//alert(mainsrc)
+      	document.getElementById("mainimg").setAttribute("src",mainsrc)
+
+      }
+      	</script>
+	</head>
+		<body>
+		  <div id="content">
+		  	<div id="main">
+		  		<img id="mainimg" src="img/main-1.jpg">
+		  	</div>
+		  	<div id="thumb">
+		  		<img src="img/thumb-1.jpg" onmouseover="change(this.src)">
+		  		<img src="img/thumb-2.jpg" onmouseover="change(this.src)">
+		  		<img src="img/thumb-3.jpg" onmouseover="change(this.src)">
+		  		<img src="img/thumb-4.jpg" onmouseover="change(this.src)">
+		  	</div>
+		  </div>	
+		</body>
+</html>

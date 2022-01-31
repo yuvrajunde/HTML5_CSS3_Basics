@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	*
+	{
+		padding: 0;
+		margin:0; 
+	}
+	#sliderclick
+	{
+		/*border: 1px solid red;*/
+		height: 90px;
+		width: 100px;
+		margin-left: 1180px;
+		border-radius: 200px;
+		position: fixed;
+		top: -35px;
+		right: -35px;
+		background: #ac01ca;
+		cursor: pointer;
+		color: orange;
+		font-size: 20px;
+		font-family: arial;
+		padding-top: 15px;		
+
+	}
+	#cart
+	{
+		border: 5px solid #c00;
+		height: 400px;
+		width: 900px;
+		top: 50%;
+		/*z-index: 10;*/
+
+		position: fixed;
+		left: 50%;
+		margin-left: -450px;
+		background: #004;
+		border-radius: 20px;
+		margin-top: -300px;
+		opacity: 0;
+
+	}
+	</style>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		flag=0
+		$('#sliderclick').click(function(){
+			if (flag==0)
+			 {
+				$('#cart').animate({
+				'margin-top':'-200px',
+				'opacity':'4'
+				})
+				flag=1
+			}
+			else{
+				$('#cart').animate({
+				'margin-top':'-300px',
+				'opacity':'0'
+			})
+				flag=0
+			}
+		})
+	})
+	</script>
+</head>
+<body>
+	<div id="sliderclick"><p>&nbsp;</p> &nbsp;cart</div>
+	<div id="cart">JKNCLSDVNSDFOVJ</div>
+
+</body>
+</html>

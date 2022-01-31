@@ -1,0 +1,95 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	#imageslider
+	{
+		width: 80%;
+	
+		height: 80%;
+		border: 1px solid ;
+		margin: 0 auto;
+
+	}
+	.sbchild
+	{
+		position: absolute;
+	}
+
+	.sliderblock
+	{
+		border: 1px solid;
+		margin:30px;
+		width: 200px;
+		height: 200px;
+		float: left;
+		position: relative;
+		border-radius: 100px;
+		overflow: hidden;
+
+	}
+	.firstblock,img
+	{
+		width: 200px;
+		height: 200px;
+		border:1px solid
+		;
+		border-radius: 100px;
+	}
+	.secondblock
+	{
+		width: 200px;
+		height: 200px;
+		border-radius: 100px;
+		background: pink;
+		/*opacity: 0.8;*/
+		margin-top: 200px;
+		position: absolute;
+
+	}
+
+
+	</style>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		// alert()
+		$(".sliderblock").mouseover(function(){
+			// alert()
+			$(this).find(".secondblock").animate({
+				"margin-top" :"0"
+			},200)
+		})
+		$(".sliderblock").mouseleave(function(){
+			// alert()
+			$(this).find(".secondblock").animate({
+				"margin-top" :"200px"
+			},200)
+		
+	})
+})
+
+	</script>
+</head>
+<body>
+
+	<div id="imageslider">
+		<div class="sliderblock">
+
+			<div class="sbchild firstblock"><img src="images/pro1.jpg"></div>
+			<div class="sbchild secondblock">Some text here</div>
+
+		</div>
+		<div class="sliderblock">
+
+			<div class="sbchild firstblock"><img src="images/pro1.jpg"></div>
+			<div class="sbchild secondblock">Some text here</div>
+
+		</div>
+
+
+
+	</div>
+	
+</body>
+</html>

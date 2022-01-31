@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	p{
+		width: 100px;
+		height: 50px;
+		background: #703;
+		cursor: pointer;
+		border-radius: 50px;
+		text-align: center;
+		color: white;
+		font-size: 30px;
+		margin: 50 auto;
+	}
+
+	</style>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		//alert()
+		$("#btnshow").click(function(){
+
+			// alert()
+			$("p").slideDown(1000)
+		})
+		$("#btnhide").click(function(){
+
+			// alert()
+			$("p").slideUp(1000)
+		})
+		$("p").click(function(){
+			$(this).hide(5000)
+		})
+	})
+
+	</script>
+</head>
+<body>
+  	
+  	<p>Paragraph1</p>
+  	<p>Paragraph2</p>
+  	<p>Paragraph3</p>
+  	<p>Paragraph4</p>
+  	<p>Paragraph5</p>
+  	<p>Paragraph6</p>
+  	<input type="button" value="show" id="btnshow">
+  	<input type="button" value="hide" id="btnhide">
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	#lblclick
+	{
+		border:1px solid black;
+		/*display: block;*/
+		padding: 6px;
+		background: #ccc;
+		display: inline-block;
+		border-radius: 10px;
+		cursor: pointer;
+		
+	}
+	#lblclick:hover
+	{
+		border: 2px solid red;
+	}
+
+	</style> 
+  <script type="text/javascript">
+    function display(msg)
+    {
+      if(msg=='mousedown')
+      {
+      	document.getElementById("lblclick").style.background="black"
+      	document.getElementById("lblclick").style.color="white"
+
+      }
+      if(msg=='Mouse Up')
+      	{
+      	document.getElementById("lblclick").style.background="#ccc"
+      	document.getElementById("lblclick").style.color="black"
+
+      }
+      
+      	document.getElementById("msg").innerHTML=msg
+      
+
+      
+    }
+  </script>
+
+</head>
+<body>
+<span id="lblclick" onmouseover="display('mouseover')" onmouseout="display('mouse exit')" onmousedown="display('mousedown')"
+onmouseup="display('mouse up')">click</span>
+<h2 id="msg"></h2>
+
+</body>
+</html>

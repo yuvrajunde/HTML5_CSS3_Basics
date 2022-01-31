@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style type="text/css">
+            
+             
+             #thumb
+             {
+             	width: 500px;
+                  margin: 10px auto;
+                  border: 1px solid red;
+                  text-align: center;
+
+             }
+             #thumb img
+             {
+             	cursor: pointer;
+             }
+             #blackbox
+             {
+                  width: 100%;
+                  height: 100%;
+                  background: black;
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  opacity: 0.5;
+                  z-index:100;
+                  display: none;
+
+             }
+             #lightbox
+             {
+                  width: 1000px;
+                  height: 480px;
+                  border: 1px solid;
+                  position: fixed;
+                  z-index: 1000;
+                  border-radius: 10px;
+                  left: 50%;
+                  margin-left: -480px;
+                  top: 50%;
+                  margin-top: -200px;
+                  display: none;
+                  text-align:right;
+                  background: white;
+
+             }
+             #lightbox img
+             {
+                  cursor: pointer;
+                  overflow: auto;
+                  border: 1px solid;
+                  /*margin-right: 900px;*/
+                  height: 200px;
+
+             }
+             #lightbox img:hover
+             {
+                 border: 1px solid red;
+             }
+             #ram img
+             {
+                  margin-left: 950px;
+                  height: 20px;
+             }
+             #one
+             {
+                  float: left;
+             }
+             #two
+             {
+                  float: left;
+                  border: 1px solid;
+             }
+	  </style>
+      <script type="text/javascript">
+      function change(thumbsrc)
+      {//alert(thumbsrc)
+      	mainsrc=thumbsrc.replace("thumb","main")
+      	//alert(mainsrc)
+      	  document.getElementById("mainimg").setAttribute("src",mainsrc)
+            document.getElementById("blackbox").style.display="block"
+            document.getElementById("lightbox").style.display="block"
+
+      }
+      function closediv()
+      {
+            document.getElementById("blackbox").style.display="none"
+            document.getElementById("lightbox").style.display="none"
+      }
+      	</script>
+      }
+	</head>
+		<body>
+		  <div id="blackbox" onclick="closediv()"></div>
+              <div id="lightbox">
+              <div id="ram"><img src="img/capture.jpg"onclick="closediv()"></div>
+                    
+
+              
+		  		<div id="one"><img id="mainimg" src="img/main-1.jpg"></div>
+                        <div id="two">ghjgvhgv</div>
+
+		  	</div>
+		  	<div id="thumb">
+		  		<img src="img/thumb-1.jpg" onclick="change(this.src)">
+		  		
+		  	</div>
+		   		</body>
+</html>

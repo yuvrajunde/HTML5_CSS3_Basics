@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script type="text/javascript">
+	function display()
+	{
+		//alert("hccsdc")
+		var txtmsg=document.getElementById("txtinput").value
+		document.getElementById("txtinput").value=""
+
+		document.getElementById("txtoutput").value=txtmsg
+		document.getElementById("msg").innerHTML=txtmsg
+	}
+</script>
+</head>
+<body>
+<input id="txtinput" placeholder="enter number"><br>
+<input id="txtoutput" placeholder="enter number"><br>
+<h2 id="msg">message</h2>
+<input type="button" value="click" onclick="display()">
+</body>
+</html>

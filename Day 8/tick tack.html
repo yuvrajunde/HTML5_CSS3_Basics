@@ -1,0 +1,246 @@
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+	#main
+	{
+		width: 306px;
+		height: 306px;
+		border: 1px solid;
+		margin: 100px auto;
+		overflow: auto;
+	}
+
+	.block
+	{
+		width: 100px;
+		height: 100px;
+		border: 1px solid;
+		float: left;
+	}
+
+	#blackbox
+	{
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: black;
+		opacity: 0.8;
+		 z-index: 10;
+	}
+
+	#lightbox
+	{
+		z-index: 20;
+		width: 200px;
+		height: 50px;
+		border: 5px solid red;
+		background: white;
+		color: red;
+		position: fixed;
+		font-size: 30px;
+		text-align: center;
+		cursor: pointer;
+		left: 50%;
+		top: 50%;
+		margin-left: -100px;
+		margin-top: -25px;
+	}
+	</style>
+
+
+	<script type="text/javascript">
+	var user1 ="", user2 = ""
+	var d11= 4, d12 = 4, d13 = 4
+	var d21= 4, d22 = 4, d23 = 4
+	var d31= 4, d32 = 4, d33 = 4
+	function startgame()
+	{
+		user1 = prompt("Enter name of player 1")
+		user2 = prompt("Enter name of player 2")
+		document.getElementById("blackbox").style.display = "none"
+		document.getElementById("lightbox").style.display = "none"
+	}
+
+	flag = 1
+	count = 0
+	function display(divid)
+	{
+		switch(divid)
+		{
+			case "d11" : 
+				if(d11 == 4)
+				{
+					d11 = flag
+				}
+				else
+				{
+					return
+				}
+				break
+
+			case "d12" : 
+				if(d12 == 4)
+				{
+					d12 = flag
+				}
+				else
+				{
+					return
+				}
+				break
+
+			case "d13" : 
+				if(d13 == 4)
+				{
+					d13 = flag
+				}
+				else
+				{
+					return
+				}
+				break
+
+			case "d21" : 
+				if(d21 == 4)
+				{
+					d21 = flag
+				}
+				else
+				{
+					return
+				}
+				break
+
+			case "d22" : 
+				if(d22 == 4)
+				{
+					d22 = flag
+				}
+				else
+				{
+					return
+				}
+				break
+
+			case "d23" : 
+				if(d23 == 4)
+				{
+					d23 = flag
+				}
+				else
+				{
+					return
+				}
+				break
+
+			case "d31" : 
+				if(d31 == 4)
+				{
+					d31 = flag
+				}
+				else
+				{
+					return
+				}
+				break
+
+			case "d32" : 
+				if(d32 == 4)
+				{
+					d32 = flag
+				}
+				else
+				{
+					return
+				}
+				break
+
+			case "d33" : 
+				if(d33 == 4)
+				{
+					d33 = flag
+				}
+				else
+				{
+					return
+				}
+				break
+		}
+
+		
+		//alert(divid)
+		if(flag == 1)
+		{
+			document.getElementById(divid).style.background = "url(image/cross.jpg)"
+			flag = 0
+		}
+		else
+		{
+			document.getElementById(divid).style.background = "url(image/zero.jpg)"
+			flag = 1	
+		}
+
+		
+
+		if( (d11 + d12 + d13 == 3 || d21 + d22 + d23 == 3 || d31 + d32 + d33 == 3 || d11 + d21 + d31 == 3 || d12 + d22 + d32 == 3 || d13 + d23 + d33 == 3 || d11 + d22 + d33 == 3 || d13 + d22 + d31 == 3) || (d11 + d12 + d13 == 0 || d21 + d22 + d23 == 0 || d31 + d32 + d33 == 0 || d11 + d21 + d31 == 0 || d12 + d22 + d32 == 0 || d13 + d23 + d33 == 0 || d11 + d22 + d33 == 0 || d13 + d22 + d31 == 0) )
+		{
+			if(flag == 0)
+				alert("Winner is " + user1)
+			else
+				alert("Winner is " + user2)
+
+
+			document.getElementById("blackbox").style.display = "block"
+			document.getElementById("lightbox").style.display = "block"
+
+			cleardiv()
+		}
+
+		count++
+		if(count == 9)
+		{
+			alert("Game is draw. Restart again")
+			document.getElementById("blackbox").style.display = "block"
+			document.getElementById("lightbox").style.display = "block"
+			cleardiv()
+		}
+	}
+
+	function cleardiv()
+	{
+
+		document.getElementById("d11").style.background = "none"
+		document.getElementById("d12").style.background = "none"
+		document.getElementById("d13").style.background = "none"
+		document.getElementById("d21").style.background = "none"
+		document.getElementById("d22").style.background = "none"
+		document.getElementById("d23").style.background = "none"
+		document.getElementById("d31").style.background = "none"
+		document.getElementById("d32").style.background = "none"
+		document.getElementById("d33").style.background = "none"
+
+	}
+	</script>
+</head>
+<body>
+
+	<div id="blackbox"></div>
+
+	<div id="lightbox" onclick="startgame()">Start Game</div>
+	<div id="main">
+		<div id="d11" class="block" onclick="display(this.id)"></div>
+		<div id="d12" class="block" onclick="display(this.id)"></div>
+		<div id="d13" class="block" onclick="display(this.id)"></div>
+		<div id="d21" class="block" onclick="display(this.id)"></div>
+		<div id="d22" class="block" onclick="display(this.id)"></div>
+		<div id="d23" class="block" onclick="display(this.id)"></div>
+		<div id="d31" class="block" onclick="display(this.id)"></div>
+		<div id="d32" class="block" onclick="display(this.id)"></div>
+		<div id="d33" class="block" onclick="display(this.id)"></div>
+	</div>
+</body>
+</html>

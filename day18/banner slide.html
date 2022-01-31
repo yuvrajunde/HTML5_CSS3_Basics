@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+   #main
+   {
+   	/*//border: 1px solid;*/
+   	width: 1050px;
+   	/*//overflow: auto;*/
+ margin: 0 auto;
+   }
+  /* #main div
+   {
+   	border: 1px solid;
+   	width: 900px;
+   	height: 450px;
+   	float: left;
+   }*/
+    #main div img
+   {
+   	
+   	width: 900px;
+   	
+   }
+   .record
+   {
+   	width: 900px;
+   	float: left;
+   	overflow: hidden;
+   }
+	</style>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+      $(document).ready(function(){
+      	$(".record:not(:first)").css("width","50px")
+
+      	// alert()
+      	$(".record").click(function(){
+
+      		w=$(this).width()
+      		//alert(w)
+      		if(w==900)
+      			return
+      		//alert(w)
+      		$(".record").not(this).animate({
+      			"width":"50px"
+      		},1000)
+
+      			$(this).animate({
+      			"width":"900px"
+      		},1000)
+
+      	})
+      })
+
+	</script>
+</head>
+<body>
+
+	<div id="main">
+        <div class="record"><img src="images/image1.jpg"></div>
+        <div class="record"><img src="images/image2.jpg"></div>
+        <div class="record"><img src="images/image3.jpg"></div>
+        <div class="record"><img src="images/image4.jpg"></div>
+
+	</div>
+
+</body>
+</html>

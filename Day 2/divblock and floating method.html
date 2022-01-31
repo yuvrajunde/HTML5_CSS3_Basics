@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	#main{
+		/*border: 1px solid;*/
+		overflow: auto;
+		padding-bottom: 50px;
+
+	}
+
+	.record{
+	border: 1px solid #ddd;
+	width: 20%;
+	height: 200px;
+	float: left;
+	border-radius:20px;
+	box-shadow: 10px 10px 10px #ccc;
+	cursor: pointer;
+	transition: transform 1s;
+	}
+	.record:hover{
+		transform: rotate(3deg);
+	}
+	.recordmiddle{
+		margin-left: 6%;
+	}
+
+	.recordlast{
+		float: right;
+		margin-right: 20px;
+	}
+	</style>
+</head>
+<body>
+<div id="main">
+	<div class="record"></div>
+	<div class="record  recordmiddle"></div>
+	<div class="record  recordmiddle"></div>
+	<div class="record  recordlast"></div>
+</div>
+</body>
+</html>

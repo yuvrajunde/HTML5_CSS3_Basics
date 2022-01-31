@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	function validate() {
+		// alert()
+		var data= document.getElementById("txtvalidate").value
+		// /alert(data)
+	
+	/*
+	/http/ =>data must contain http 
+	/^http/ =>data must start  with http 
+		/http$/ =>data must end  with http 
+			/^http$/ =>data must constain  only http */
+	 var regexp = /^http$/
+	 // alert(regexp.test(data))
+	 if(regexp.test(data)==true)
+		alert("ok")
+	 else
+	 	alert("error")
+}
+	</script>
+</head>
+<body>
+	<input id="txtvalidate">
+	<input type="button" value="validate" onclick="validate()">
+</body>
+</html>

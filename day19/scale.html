@@ -1,0 +1,80 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	#main
+	{
+		/*border: 1px solid;*/
+		overflow: auto;
+		/*height: 260px;*/
+		background: linear-gradient(blue,green,orange,#444,#910,#869,#000);
+		margin: 0 auto;
+		overflow: hidden;
+
+	}
+	#main div
+	{
+		/*border: 1px solid;*/
+		float: left;
+		/*margin: 0 auto;*/
+		margin: 50px;
+	}
+	.record img
+	{
+		/*border: 1px solid;*/
+		/*margin: 0 auto;*/
+		border-radius: 100px;
+		width: 200px;
+		height: 200px;
+		box-shadow: 10px 10px 10px  #ccc;
+		cursor: pointer;
+	}
+
+	</style>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function(){
+
+        	//alert()
+        
+        	$(".record").mouseover(function(){
+        		$(this).css({
+        			"transform":"scale(1.2)",
+        			"transition":"transform 1s"
+        		})
+        		$(".record").not(this).css({
+        			"transform":"scale(0.9)",
+        			"transition":"transform 1s"
+        		})
+        	})
+        	$(".record").mouseleave(function(){
+        		$(".record").css({
+        			"transform":"scale(1.0)",
+        			"transition":"transform 1s"
+        		})
+        	})
+
+        	
+        })
+
+	</script>
+</head>
+<body>
+	<div id="main">
+       <div class="record"><img src="images/pro3.jpg"></div>
+       	<div class="record"><img src="images/pro6.jpg"></div>
+		 <div class="record"><img src="images/pro2.jpg"></div>
+        <div class="record"><img src="images/pro4.jpg"></div>
+        <div class="record"><img src="images/pro5.jpg"></div>
+		<div class="record"><img src="images/pro6.jpg"></div>
+		 <div class="record"><img src="images/pro2.jpg"></div>
+        <div class="record"><img src="images/pro4.jpg"></div>
+		<div class="record"><img src="images/pro1.jpg"></div>
+		 <div class="record"><img src="images/pro3.jpg"></div>
+        <div class="record"><img src="images/pro4.jpg"></div>
+		<div class="record"><img src="images/pro2.jpg"></div>
+
+	</div>
+
+</body>
+</html>

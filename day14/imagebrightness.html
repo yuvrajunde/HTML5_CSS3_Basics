@@ -1,0 +1,97 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	.product
+	{
+		width: 200px;
+		height: 200px;
+		background: url(images/pro1.jpg);
+		position: relative;
+		margin:200px;
+		overflow: hidden;
+	}
+	.product div
+	{
+		width: 100px;
+		height: 100px;
+		background: black;
+		position: absolute;
+		opacity: 0.5;
+
+	}
+	</style>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		// alert()
+		$(".product div:first").css({
+			"top" : "0",
+			"left": "0"
+		})
+		$(".product div:eq(1)").css({
+			"top" : "0",
+			"right": "0"
+		})
+		$(".product div:eq(2)").css({
+			"bottom" : "0",
+			"left": "0"
+		})
+		$(".product div:last").css({
+			"bottom" : "0",
+			"right": "0"
+		})
+		$(".product").mouseover(function(){
+		$(".product div:first").animate({
+			"top" : "-100px",
+			"left": "-100px"
+		},1000)
+		$(".product div:eq(1)").animate({
+			"top" : "-100px",
+			"right": "-100px"
+		},1000)
+		$(".product div:eq(2)").animate({
+			"bottom" : "-100px",
+			"left": "-100px"
+		},1000)
+		$(".product div:last").animate({
+			"bottom" : "-100px",
+			"right": "-100px"
+		},1000)
+	 })
+		$(".product").mouseleave(function(){
+		$(".product div:first").animate({
+			"top" : "0",
+			"left": "0"
+		},1000)
+		$(".product div:eq(1)").animate({
+			"top" : "0",
+			"right": "0"
+		},1000)
+		$(".product div:eq(2)").animate({
+			"bottom" : "0",
+			"left": "0"
+		},1000)
+		$(".product div:last").animate({
+			"bottom" : "0",
+			"right": "0"
+		},1000)
+	 })
+	})
+
+
+
+	</script>
+</head>
+<body>
+	<div>
+		<div class="product">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+
+	</div>
+</body>
+</html>
